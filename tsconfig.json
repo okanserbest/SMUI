@@ -1,0 +1,12 @@
+{
+  "extends": "@tsconfig/react-native/tsconfig.json",
+  "compilerOptions": {
+    "declaration": true,
+    "declarationDir": "./app/types",
+
+    "typeRoots": [
+
+      "./app/types/Colors.d.ts"
+    ]
+  }
+}
