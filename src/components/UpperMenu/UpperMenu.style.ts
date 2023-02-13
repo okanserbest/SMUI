@@ -11,7 +11,6 @@ interface globalStyleType {
   leftComponent:ViewStyle
   rightComponent:ViewStyle
   leftImage:ImageStyle
-
 }
 
 export default StyleSheet.create<globalStyleType>({

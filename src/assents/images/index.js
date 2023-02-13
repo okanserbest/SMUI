@@ -25,11 +25,19 @@ const image = {
     notif:require('./icon/notif.png'),
     profile:require('./icon/profile.png'),
     homeActive:require('./icon/homeActive.png'),
+    search:require('./icon/search.png'),
   },
   screen:{
     homepage:require('./screen/homepage.png'),
     profile:require('./screen/profile.png'),
-    
+  },
+  user:{
+    // profile1:require('./profile/'),
+    profile1:require('./profile/profile1.png'),
+    profile2:require('./profile/profile2.png'),
+    profile3:require('./profile/profile3.png'),
+    profile4:require('./profile/profile4.png'),
+    profile5:require('./profile/profile5.png'),
   }
 };
 export default image;

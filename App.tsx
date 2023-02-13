@@ -6,17 +6,19 @@
  */
 
 import React from 'react';
-import { SafeAreaView, Text, View } from 'react-native';
+import { Provider } from "react-redux"
 import RootStack from './src/routes/RootStack';
-import { NavigationContainer } from '@react-navigation/native';
+import configureStore from "./src/redux/store";
+
+const store = configureStore();
 
 function App(): JSX.Element {
   // const isDarkMode = useColorScheme() === 'dark';
 
   return (
-    <>
+    <Provider store={store}>
         <RootStack />
-    </>
+    </Provider>
   );
 }
 
