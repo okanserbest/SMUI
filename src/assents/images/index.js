@@ -4,6 +4,8 @@ const image = {
   bg:{
     onBoarding:require('./bg/onboardingBg.png'),
     conversations:require('./bg/conversations.png'),
+    chat:require('./bg/chat.png'),
+    
   },
   onBoarding: {
     heroImg: require('./introduce/HeroImg.png'),
@@ -26,6 +28,7 @@ const image = {
     profile:require('./icon/profile.png'),
     homeActive:require('./icon/homeActive.png'),
     search:require('./icon/search.png'),
+    send:require('./icon/send.png'),
   },
   screen:{
     homepage:require('./screen/homepage.png'),

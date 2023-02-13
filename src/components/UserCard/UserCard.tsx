@@ -3,7 +3,7 @@ import { View, Text, Image, TouchableOpacity } from 'react-native';
 import image from '../../assents/images';
 import styles from './UserCard.style'
 import { UserMessagesType } from '../../redux/initialState/messagesInitialState';
-
+import {useNavigation} from '@react-navigation/core';
 
 
 
@@ -15,10 +15,10 @@ export interface UserCardProps {
 export function UserCard({ onPress, user }: UserCardProps) {
 
     const lastMessage=  user.messages[user.messages.length - 1].message;
-
+    const navigation = useNavigation()
     return (
         <>
-        <TouchableOpacity style={styles.container} onPress={()=>console.log("user",user)}>
+        <TouchableOpacity style={styles.container} onPress={()=>navigation.navigate('Chat', {userId:user.userId})}>
             <View style={styles.imageContainer}>
                 <Image style={styles.profileImage} source={image.user[`profile${user.userId}`]} />
                   

@@ -5,7 +5,9 @@ export const setMessages = allMessage => ({
   allMessage
 })
 
-export const newMessage = message => ({
-  type: NEW_MESSAGE,
-  message
-})
+export const newSendMessage = (newMessageInfo) =>  {
+  return({
+      type: NEW_MESSAGE,
+      newMessageInfo
+    })
+}

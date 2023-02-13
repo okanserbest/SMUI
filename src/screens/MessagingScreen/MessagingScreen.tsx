@@ -17,19 +17,14 @@ export function MessagingScreen ({}: MessagingScreenProps) {
 
     const navigation = useNavigation();
     
-    const messages = useSelector(state => state.messageReducers);
-    
-    console.log("messages",messages)
+    const messages = useSelector(state => state.message);
 
-    const renderItem = ({item, index}) => (
-        <UserCard user={item}  />
-      )
-    // const renderItem = useCallback(
-    //     ({item, index}) => (
-    //       <UserCard user={item}  />
-    //     ),
-    //     [messages],
-    //   );
+    const renderItem = useCallback(
+        ({item, index}) => (
+          <UserCard user={item}  />
+        ),
+        [messages],
+      );
 
 
     return (

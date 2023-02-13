@@ -9,13 +9,12 @@ import {
   createStackNavigator,
 } from '@react-navigation/stack';
 import Onboarding from '../../screens/Onboarding/OnboardingScreens';
-import { Text, View } from 'react-native';
 import AppStack from '../AppStack';
+import { ChatScreen } from '../../screens/ChatScreen/ChatScreen';
 
 const Stack = createStackNavigator();
 const RootStack = () => {
   const navigationRef = useNavigationContainerRef();
-  console.log("test RootStack")
   return (
     <NavigationContainer ref={navigationRef}>
       <Stack.Navigator
@@ -26,6 +25,7 @@ const RootStack = () => {
 
         <Stack.Screen name="Onboarding" component={Onboarding} />
         <Stack.Screen name={'App'} component={AppStack} />
+        <Stack.Screen name={'Chat'} component={ChatScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );

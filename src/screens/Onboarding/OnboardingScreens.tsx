@@ -45,17 +45,12 @@ const slides = [
 ];
 
 const _renderItem = ( {item,navigation} : OnboardingItemProps) => {
-  console.log("item",item)
-  console.log("navigation",navigation)
   return (
     <View style={style.slide}>
       <Image style={style.bgImage} source={images.bg.onBoarding} />
       <TouchableOpacity
-      onPress={()=>{
-        console.log("item.isDone",item.isDone)
+      onPress={()=>{ 
         if(item.isDone){
-
-          console.log("isDone")
           navigation.reset({
             index: 0,
             routes: [
@@ -68,13 +63,9 @@ const _renderItem = ( {item,navigation} : OnboardingItemProps) => {
               },
             ],
           });
-
-
-          // navigation.navigate('AddFirstProduct');
         }
       }}
       style={style.buttonNextContainer} >
-            {/* <View style={style.buttonNextRectangle1}/> */}
               
           <Image
             style={style.buttonNextImage}
@@ -82,8 +73,6 @@ const _renderItem = ( {item,navigation} : OnboardingItemProps) => {
       </TouchableOpacity>
 
 
-      {/* <View style={style.bg}>
-      </View> */}
       <View style={style.slideTitleArea}>
         <View>
           <Text style={style.welcomeText}>{item.welcome}</Text>
@@ -95,7 +84,6 @@ const _renderItem = ( {item,navigation} : OnboardingItemProps) => {
         <Image
           style={style.image}
           source={item.image}
-          // resizeMode={FastImage.resizeMode.contain}
           />
       </View>
       <View style={style.dotContainer}>
@@ -108,7 +96,6 @@ const _renderItem = ( {item,navigation} : OnboardingItemProps) => {
 };
 
 const Onboarding = ({navigation}: OnboardingProps) => {
-  console.log("Onboarding")
   const [getIndex, setIndex] = useState<Number>(0);
 
   const scrollRef = React.useRef();
@@ -118,13 +105,12 @@ const Onboarding = ({navigation}: OnboardingProps) => {
 
 
   const doneSlider = async () => {
-    console.log("doneSlider")
     // await AsyncStorage.setItem('@isFirst', 'true');
     // props.navigation.reset({
     //   index: 0,
     //   routes: [
     //     {
-    //       name: 'Auth',
+    //       name: 'App',
     //       params: {
     //         screen: 'SignIn',
     //         params: props?.route?.params || null,
@@ -137,14 +123,6 @@ const Onboarding = ({navigation}: OnboardingProps) => {
   const onScrollToIndex = (index: any) => {
     setIndex(index);
   }
-  // const onScrollToIndex = useCallback((index:number):void => {
-  //   scrollRef?.current?.scrollToIndex({
-  //     index,
-  //   });
-  //   setIndex(index);
-  // },[]);
-  console.log("scrollX", scrollX)
-
   return (
     <SafeAreaView>
       <Animated.FlatList
@@ -171,7 +149,6 @@ const Onboarding = ({navigation}: OnboardingProps) => {
         showsHorizontalScrollIndicator={false}
         renderItem={(item) => _renderItem({...item,navigation}, scrollX, slides)}
       />
-      {/* <Text>TEst </Text>  */}
       <Buttons
         scrollX={scrollX}
         getIndex={getIndex}

@@ -11,7 +11,6 @@ export interface TitleProps {
 }
 
 export function Title({ title }: TitleProps) {
-    console.log("Title", title)
     return (
         <View style={styles.container}>
             <Text style={[typography.h2,styles.text]}>{title}</Text>

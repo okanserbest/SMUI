@@ -17,23 +17,23 @@ export const initialState: Array<UserMessagesType> = [
         photoUrl: "CharlieKelly",
         messages: [
             {
-            senderID: 0,
+            senderID: 1,
             message: "we r goin to c the lions"
             },
             {
-            senderID: 0,
+            senderID: 1,
             message: "they are doing a feed thing event at the zoo.."
             },
             {
-            senderID: 1,
+            senderID: 0,
             message: "when?"
             },
             {
-            senderID: 1,
+            senderID: 0,
             message: "see the lions or sea lions? also, is mac there with u??"
             },
             {
-            senderID: 1,
+            senderID: 0,
             message: "see the lions or sea lions? also, is mac there with u??"
             },
          ]
